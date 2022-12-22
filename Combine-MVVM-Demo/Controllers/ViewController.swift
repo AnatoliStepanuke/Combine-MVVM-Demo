@@ -1,4 +1,5 @@
 import UIKit
+import Combine
 
 final class ViewController: UIViewController {
     // MARK: - Outlets
@@ -17,4 +18,14 @@ final class ViewController: UIViewController {
         super.viewDidLoad()
     }
     // MARK: - Setups
+}
+
+protocol QuoteServiceType {
+    func getRandomQuote() -> AnyPublisher<Quote, Error>
+}
+
+final class QuoteManager: QuoteServiceType {
+    func getRandomQuote() -> AnyPublisher<Quote, Error> {
+        <#code#>
+    }
 }

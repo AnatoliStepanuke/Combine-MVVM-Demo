@@ -13,6 +13,7 @@
 		DC18B3AB29548D6A003F2DD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC18B3A929548D6A003F2DD3 /* Main.storyboard */; };
 		DC18B3AD29548D6D003F2DD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC18B3AC29548D6D003F2DD3 /* Assets.xcassets */; };
 		DC18B3B029548D6D003F2DD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC18B3AE29548D6D003F2DD3 /* LaunchScreen.storyboard */; };
+		DC84A5962954CF5200A8F090 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC84A5952954CF5200A8F090 /* Quote.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		DC18B3AC29548D6D003F2DD3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC18B3AF29548D6D003F2DD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC18B3B129548D6D003F2DD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC84A5952954CF5200A8F090 /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				DC18B3B829548E55003F2DD3 /* Controllers */,
 				DC18B3B729548E45003F2DD3 /* Delegates */,
 				DC18B3B129548D6D003F2DD3 /* Info.plist */,
+				DC84A5942954CF4100A8F090 /* Models */,
 				DC18B3B929548E5D003F2DD3 /* Storyboards */,
 			);
 			path = "Combine-MVVM-Demo";
@@ -97,6 +100,14 @@
 				DC18B3AC29548D6D003F2DD3 /* Assets.xcassets */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		DC84A5942954CF4100A8F090 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DC84A5952954CF5200A8F090 /* Quote.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,6 +203,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC84A5962954CF5200A8F090 /* Quote.swift in Sources */,
 				DC18B3A829548D6A003F2DD3 /* ViewController.swift in Sources */,
 				DC18B3A429548D6A003F2DD3 /* AppDelegate.swift in Sources */,
 				DC18B3A629548D6A003F2DD3 /* SceneDelegate.swift in Sources */,
