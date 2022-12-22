@@ -56,15 +56,47 @@
 		DC18B3A229548D6A003F2DD3 /* Combine-MVVM-Demo */ = {
 			isa = PBXGroup;
 			children = (
-				DC18B3A329548D6A003F2DD3 /* AppDelegate.swift */,
-				DC18B3A529548D6A003F2DD3 /* SceneDelegate.swift */,
-				DC18B3A729548D6A003F2DD3 /* ViewController.swift */,
-				DC18B3A929548D6A003F2DD3 /* Main.storyboard */,
-				DC18B3AC29548D6D003F2DD3 /* Assets.xcassets */,
-				DC18B3AE29548D6D003F2DD3 /* LaunchScreen.storyboard */,
+				DC18B3BA29548E71003F2DD3 /* Assets */,
+				DC18B3B829548E55003F2DD3 /* Controllers */,
+				DC18B3B729548E45003F2DD3 /* Delegates */,
 				DC18B3B129548D6D003F2DD3 /* Info.plist */,
+				DC18B3B929548E5D003F2DD3 /* Storyboards */,
 			);
 			path = "Combine-MVVM-Demo";
+			sourceTree = "<group>";
+		};
+		DC18B3B729548E45003F2DD3 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				DC18B3A329548D6A003F2DD3 /* AppDelegate.swift */,
+				DC18B3A529548D6A003F2DD3 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		DC18B3B829548E55003F2DD3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DC18B3A729548D6A003F2DD3 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		DC18B3B929548E5D003F2DD3 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				DC18B3A929548D6A003F2DD3 /* Main.storyboard */,
+				DC18B3AE29548D6D003F2DD3 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		DC18B3BA29548E71003F2DD3 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				DC18B3AC29548D6D003F2DD3 /* Assets.xcassets */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,6 +109,7 @@
 				DC18B39C29548D6A003F2DD3 /* Sources */,
 				DC18B39D29548D6A003F2DD3 /* Frameworks */,
 				DC18B39E29548D6A003F2DD3 /* Resources */,
+				DC18B3BB29548F7B003F2DD3 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -132,6 +165,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DC18B3BB29548F7B003F2DD3 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if test -d \"/opt/homebrew/bin/\"; then\n  PATH=\"/opt/homebrew/bin/:${PATH}\"\nfi\n\nexport PATH\n\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DC18B39C29548D6A003F2DD3 /* Sources */ = {
@@ -295,6 +349,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,9 +357,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "AnatoliStepanuke.Combine-MVVM-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -323,6 +381,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,9 +389,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "AnatoliStepanuke.Combine-MVVM-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
