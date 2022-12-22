@@ -1,6 +1,13 @@
 import UIKit
 
 final class ViewController: UIViewController {
+    // MARK: - Outlets
+    @IBOutlet weak var quoteLabel: UILabel!
+    @IBOutlet weak var refreshButton: UIButton!
+
+    // MARK: - Actions
+    @IBAction func refreshButtonTapped(_ sender: Any) { }
+
     // MARK: - Properties
 
     // MARK: - Constants
@@ -8,7 +15,6 @@ final class ViewController: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .blue
     }
     // MARK: - Setups
 }
