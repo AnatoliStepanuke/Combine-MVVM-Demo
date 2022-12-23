@@ -26,6 +26,16 @@ protocol QuoteServiceType {
 
 final class QuoteManager: QuoteServiceType {
     func getRandomQuote() -> AnyPublisher<Quote, Error> {
-        <#code#>
+        guard let url = URL(string: Constants.quoteReference) else {
+            return Result<Quote, Error>.failure(QuoteError.resultFailure).publisher.eraseToAnyPublisher()
+        }
+
+        return URLSession.shared.dataTaskPublisher(for: url)
+            .catch { error in
+                return Fail(error: error).eraseToAnyPublisher()
+            }
+            .map { $0.data }
+            .decode(type: Quote.self, decoder: JSONDecoder())
+            .eraseToAnyPublisher()
     }
 }

@@ -14,6 +14,7 @@
 		DC18B3AD29548D6D003F2DD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC18B3AC29548D6D003F2DD3 /* Assets.xcassets */; };
 		DC18B3B029548D6D003F2DD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC18B3AE29548D6D003F2DD3 /* LaunchScreen.storyboard */; };
 		DC84A5962954CF5200A8F090 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC84A5952954CF5200A8F090 /* Quote.swift */; };
+		DC84A59C2955C87900A8F090 /* QuoteManager+QuoteError+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC84A59B2955C87900A8F090 /* QuoteManager+QuoteError+Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		DC18B3AF29548D6D003F2DD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC18B3B129548D6D003F2DD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC84A5952954CF5200A8F090 /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
+		DC84A59B2955C87900A8F090 /* QuoteManager+QuoteError+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuoteManager+QuoteError+Constants.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		DC18B3A229548D6A003F2DD3 /* Combine-MVVM-Demo */ = {
 			isa = PBXGroup;
 			children = (
+				DC84A59A2955C84300A8F090 /* Extensions */,
 				DC18B3BA29548E71003F2DD3 /* Assets */,
 				DC18B3B829548E55003F2DD3 /* Controllers */,
 				DC18B3B729548E45003F2DD3 /* Delegates */,
@@ -108,6 +111,14 @@
 				DC84A5952954CF5200A8F090 /* Quote.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		DC84A59A2955C84300A8F090 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DC84A59B2955C87900A8F090 /* QuoteManager+QuoteError+Constants.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,6 +215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC84A5962954CF5200A8F090 /* Quote.swift in Sources */,
+				DC84A59C2955C87900A8F090 /* QuoteManager+QuoteError+Constants.swift in Sources */,
 				DC18B3A829548D6A003F2DD3 /* ViewController.swift in Sources */,
 				DC18B3A429548D6A003F2DD3 /* AppDelegate.swift in Sources */,
 				DC18B3A629548D6A003F2DD3 /* SceneDelegate.swift in Sources */,
