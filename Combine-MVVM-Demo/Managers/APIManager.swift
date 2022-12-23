@@ -1,11 +1,8 @@
 import Foundation
 import Combine
 
-protocol QuoteServiceType {
-    func getRandomQuote() -> AnyPublisher<Quote, Error>
-}
-
-final class APIManager: QuoteServiceType {
+final class APIManager {
+    // MARK: - API
     func getRandomQuote() -> AnyPublisher<Quote, Error> {
         guard let url = URL(string: Constants.quoteReference) else {
             return Result<Quote, Error>.failure(APIError.resultFailure).publisher.eraseToAnyPublisher()
