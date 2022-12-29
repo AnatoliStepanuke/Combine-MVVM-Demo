@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC07A3EB295E27C100D5486D /* QuoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC07A3EA295E27C100D5486D /* QuoteViewModel.swift */; };
 		DC18B3A429548D6A003F2DD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC18B3A329548D6A003F2DD3 /* AppDelegate.swift */; };
 		DC18B3A629548D6A003F2DD3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC18B3A529548D6A003F2DD3 /* SceneDelegate.swift */; };
 		DC18B3A829548D6A003F2DD3 /* QuoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC18B3A729548D6A003F2DD3 /* QuoteViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DC07A3EA295E27C100D5486D /* QuoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteViewModel.swift; sourceTree = "<group>"; };
 		DC18B3A029548D6A003F2DD3 /* Combine-MVVM-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Combine-MVVM-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC18B3A329548D6A003F2DD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC18B3A529548D6A003F2DD3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				DC18B3A729548D6A003F2DD3 /* QuoteViewController.swift */,
+				DC07A3EA295E27C100D5486D /* QuoteViewModel.swift */,
 			);
 			path = Quote;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC84A5A22955CFE300A8F090 /* QuoteService.swift in Sources */,
+				DC07A3EB295E27C100D5486D /* QuoteViewModel.swift in Sources */,
 				DC84A59F2955CB2D00A8F090 /* APIManager.swift in Sources */,
 				DC84A5962954CF5200A8F090 /* Quote.swift in Sources */,
 				DC84A59C2955C87900A8F090 /* APIManager+APIError+Constants.swift in Sources */,
