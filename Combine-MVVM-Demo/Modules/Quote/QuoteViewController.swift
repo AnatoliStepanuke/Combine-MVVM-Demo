@@ -75,13 +75,13 @@ final class QuoteViewController: UIViewController {
     // MARK: - Setups
     private func bindSetup() {
         let output = quoteViewModel.transform(input: passthroughSubjectInput.eraseToAnyPublisher())
-        output.sink { [weak self] event in
-            DispatchQueue.main.async {
-                switch event {
-                case .fetchQuoteDidSucceded(let quote): self?.quoteLabel.text = quote.content
-                case .fetchQuoteDidFailed(let error): self?.quoteLabel.text = error.localizedDescription
-                case .toggleButton(let isEnabled): self?.refreshButton.isEnabled = isEnabled
-                }
+        output
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] event in
+            switch event {
+            case .fetchQuoteDidSucceded(let quote): self?.quoteLabel.text = quote.content
+            case .fetchQuoteDidFailed(let error): self?.quoteLabel.text = error.localizedDescription
+            case .toggleButton(let isEnabled): self?.refreshButton.isEnabled = isEnabled
             }
         }
         .store(in: &cancellables)
