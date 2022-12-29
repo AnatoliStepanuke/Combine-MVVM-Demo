@@ -37,6 +37,7 @@ final class QuoteViewController: UIViewController {
     @IBAction func refreshButtonTapped(_ sender: Any) { }
 
     // MARK: - Properties
+    private var cancellables = Set<AnyCancellable>()
 
     // MARK: - Constants
     private let quoteViewModel = QuoteViewModel()
@@ -47,6 +48,12 @@ final class QuoteViewController: UIViewController {
         super.viewDidLoad()
         bindSetup()
     }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+    }
+
     // MARK: - Setups
     private func bindSetup() {
         let output = quoteViewModel.transform(input: passthroughSubjectInput.eraseToAnyPublisher())
@@ -57,5 +64,6 @@ final class QuoteViewController: UIViewController {
             case .toggleButton(let isEnabled): self?.refreshButton.isEnabled = isEnabled
             }
         }
+        .store(in: &cancellables)
     }
 }
