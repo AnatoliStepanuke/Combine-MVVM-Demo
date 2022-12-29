@@ -38,7 +38,9 @@ final class QuoteViewModel {
 
     // MARK: - Setups
     private func setupRandomQuote() {
+        passthroughSubjectOutput.send(.toggleButton(isEnabled: false))
         quoteServiceType.getRandomQuote().sink { [weak self] completion in
+            self?.passthroughSubjectOutput.send(.toggleButton(isEnabled: true))
             if case .failure(let error) = completion {
                 self?.passthroughSubjectOutput.send(.fetchQuoteDidFailed(error: error))
             }
