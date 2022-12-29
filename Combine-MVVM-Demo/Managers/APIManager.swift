@@ -4,7 +4,7 @@ import Combine
 final class APIManager {
     // MARK: - API
     func getRandomQuote() -> AnyPublisher<Quote, Error> {
-        guard let url = URL(string: Constants.quoteReference) else {
+        guard let url = URL(string: Constants.quotesReference) else {
             return Result<Quote, Error>.failure(APIError.resultFailure).publisher.eraseToAnyPublisher()
         }
 

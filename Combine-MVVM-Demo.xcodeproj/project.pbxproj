@@ -65,12 +65,12 @@
 			isa = PBXGroup;
 			children = (
 				DC18B3BA29548E71003F2DD3 /* Assets */,
-				DC18B3B829548E55003F2DD3 /* Controllers */,
 				DC18B3B729548E45003F2DD3 /* Delegates */,
 				DC84A59A2955C84300A8F090 /* Extensions */,
 				DC18B3B129548D6D003F2DD3 /* Info.plist */,
 				DC84A59D2955CAAB00A8F090 /* Managers */,
 				DC84A5942954CF4100A8F090 /* Models */,
+				DC84A5A42955D14800A8F090 /* Modules */,
 				DC84A5A02955CFCD00A8F090 /* Services */,
 				DC18B3B929548E5D003F2DD3 /* Storyboards */,
 			);
@@ -84,14 +84,6 @@
 				DC18B3A529548D6A003F2DD3 /* SceneDelegate.swift */,
 			);
 			path = Delegates;
-			sourceTree = "<group>";
-		};
-		DC18B3B829548E55003F2DD3 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				DC18B3A729548D6A003F2DD3 /* QuoteViewController.swift */,
-			);
-			path = Controllers;
 			sourceTree = "<group>";
 		};
 		DC18B3B929548E5D003F2DD3 /* Storyboards */ = {
@@ -141,6 +133,22 @@
 				DC84A5A12955CFE300A8F090 /* QuoteService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		DC84A5A42955D14800A8F090 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				DC84A5A52955D16700A8F090 /* Quote */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		DC84A5A52955D16700A8F090 /* Quote */ = {
+			isa = PBXGroup;
+			children = (
+				DC18B3A729548D6A003F2DD3 /* QuoteViewController.swift */,
+			);
+			path = Quote;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
