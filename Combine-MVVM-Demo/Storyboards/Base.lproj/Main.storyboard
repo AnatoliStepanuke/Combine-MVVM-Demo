@@ -17,19 +17,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="e7o-TR-3wE">
-                                <rect key="frame" x="24" y="307" width="327" height="198"/>
+                            <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="e7o-TR-3wE" userLabel="Container">
+                                <rect key="frame" x="36" y="270.66666666666669" width="303" height="271.00000000000006"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quote" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f45-yk-hTN">
-                                        <rect key="frame" x="0.0" y="0.0" width="327" height="138"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f45-yk-hTN">
+                                        <rect key="frame" x="0.0" y="0.0" width="303" height="125"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="125" id="HPd-Bi-kTg"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="raZ-26-u4E">
+                                        <rect key="frame" x="0.0" y="149" width="303" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s4H-6W-soS">
-                                        <rect key="frame" x="0.0" y="162" width="327" height="36"/>
+                                        <rect key="frame" x="0.0" y="223" width="303" height="48"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="36" id="S04-jr-OHi"/>
+                                            <constraint firstAttribute="height" constant="48" id="JnB-0M-eX1"/>
                                         </constraints>
                                         <color key="tintColor" systemColor="labelColor"/>
                                         <state key="normal" title="Button"/>
@@ -44,14 +53,14 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="e7o-TR-3wE" secondAttribute="trailing" constant="24" id="8fh-OS-F5f"/>
-                            <constraint firstItem="e7o-TR-3wE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VUU-H4-Hg9"/>
-                            <constraint firstItem="e7o-TR-3wE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="c8a-Gr-25M"/>
-                            <constraint firstItem="e7o-TR-3wE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="lul-jO-UZj"/>
-                            <constraint firstItem="e7o-TR-3wE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="260" id="qmW-mA-Rh7"/>
+                            <constraint firstItem="e7o-TR-3wE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="EnG-cL-IGS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="e7o-TR-3wE" secondAttribute="trailing" constant="36" id="GeF-Hs-GEu"/>
+                            <constraint firstItem="e7o-TR-3wE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36" id="Ku3-vh-AWn"/>
+                            <constraint firstItem="e7o-TR-3wE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bjf-KW-I8N"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="authorLabel" destination="raZ-26-u4E" id="7sW-I3-UfR"/>
                         <outlet property="quoteLabel" destination="f45-yk-hTN" id="8sc-En-Owy"/>
                         <outlet property="refreshButton" destination="s4H-6W-soS" id="J8Q-Sm-r05"/>
                     </connections>

@@ -4,6 +4,7 @@ import Combine
 final class QuoteViewController: UIViewController {
     // MARK: - Outlets
     @IBOutlet weak var quoteLabel: UILabel!
+    @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var refreshButton: UIButton!
 
     // MARK: - Constants
@@ -31,7 +32,9 @@ final class QuoteViewController: UIViewController {
             .receive(on: DispatchQueue.main)
             .sink { [weak self] event in
             switch event {
-            case .fetchQuoteDidSucceded(let quote): self?.quoteLabel.text = quote.content
+            case .fetchQuoteDidSucceded(let quote):
+                self?.quoteLabel.text = quote.content
+                self?.authorLabel.text = quote.author
             case .fetchQuoteDidFailed(let error): self?.quoteLabel.text = error.localizedDescription
             case .toggleButton(let isEnabled): self?.refreshButton.isEnabled = isEnabled
             }
