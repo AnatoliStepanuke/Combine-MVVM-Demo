@@ -18,6 +18,8 @@
 		DC84A59C2955C87900A8F090 /* APIManager+APIError+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC84A59B2955C87900A8F090 /* APIManager+APIError+Constants.swift */; };
 		DC84A59F2955CB2D00A8F090 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC84A59E2955CB2D00A8F090 /* APIManager.swift */; };
 		DC84A5A22955CFE300A8F090 /* QuoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC84A5A12955CFE300A8F090 /* QuoteService.swift */; };
+		DC907834297806DD00D71DB0 /* ToggleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC907833297806DD00D71DB0 /* ToggleViewController.swift */; };
+		DC907836297806EB00D71DB0 /* ToggleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC907835297806EB00D71DB0 /* ToggleViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		DC84A59B2955C87900A8F090 /* APIManager+APIError+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIManager+APIError+Constants.swift"; sourceTree = "<group>"; };
 		DC84A59E2955CB2D00A8F090 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		DC84A5A12955CFE300A8F090 /* QuoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteService.swift; sourceTree = "<group>"; };
+		DC907833297806DD00D71DB0 /* ToggleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleViewController.swift; sourceTree = "<group>"; };
+		DC907835297806EB00D71DB0 /* ToggleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				DC84A5A52955D16700A8F090 /* Quote */,
+				DC907832297806BE00D71DB0 /* Toggle */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -152,6 +157,15 @@
 				DC07A3EA295E27C100D5486D /* QuoteViewModel.swift */,
 			);
 			path = Quote;
+			sourceTree = "<group>";
+		};
+		DC907832297806BE00D71DB0 /* Toggle */ = {
+			isa = PBXGroup;
+			children = (
+				DC907833297806DD00D71DB0 /* ToggleViewController.swift */,
+				DC907835297806EB00D71DB0 /* ToggleViewModel.swift */,
+			);
+			path = Toggle;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,8 +264,10 @@
 				DC84A5A22955CFE300A8F090 /* QuoteService.swift in Sources */,
 				DC07A3EB295E27C100D5486D /* QuoteViewModel.swift in Sources */,
 				DC84A59F2955CB2D00A8F090 /* APIManager.swift in Sources */,
+				DC907834297806DD00D71DB0 /* ToggleViewController.swift in Sources */,
 				DC84A5962954CF5200A8F090 /* Quote.swift in Sources */,
 				DC84A59C2955C87900A8F090 /* APIManager+APIError+Constants.swift in Sources */,
+				DC907836297806EB00D71DB0 /* ToggleViewModel.swift in Sources */,
 				DC18B3A829548D6A003F2DD3 /* QuoteViewController.swift in Sources */,
 				DC18B3A429548D6A003F2DD3 /* AppDelegate.swift in Sources */,
 				DC18B3A629548D6A003F2DD3 /* SceneDelegate.swift in Sources */,
