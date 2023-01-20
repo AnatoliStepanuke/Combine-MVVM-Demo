@@ -149,6 +149,11 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="toggleButtonFive" destination="csR-Qy-zko" id="t80-0b-Bim"/>
+                        <outlet property="toggleButtonFour" destination="D1W-US-MBK" id="WLJ-Yc-eTf"/>
+                        <outlet property="toggleButtonOne" destination="Nhm-Bv-cAo" id="mg3-yy-uwy"/>
+                        <outlet property="toggleButtonThree" destination="rd2-Ea-7OV" id="zwH-wd-jOv"/>
+                        <outlet property="toggleButtonTwo" destination="hZG-dP-n9v" id="5UA-KJ-ap8"/>
                         <outlet property="toggleLabel" destination="a9d-gK-Env" id="hH5-sn-Qdc"/>
                     </connections>
                 </viewController>
