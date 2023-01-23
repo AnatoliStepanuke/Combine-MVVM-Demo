@@ -31,32 +31,17 @@ final class ToggleViewController: UIViewController {
     }
 
     // MARK: - Actions
-    @IBAction func toggleOne(_ sender: Any) {
-        switch toggleButtonOne.isOn {
-        case true: toggleViewModel.toggleSwitchButtonIsEnabled.send()
-        case false: toggleViewModel.toggleSwitchButtonIsDisabled.send()
-        }
-    }
-    @IBAction func toggleTwo(_ sender: Any) {
-        switch toggleButtonTwo.isOn {
-        case true: toggleViewModel.toggleSwitchButtonIsEnabled.send()
-        case false: toggleViewModel.toggleSwitchButtonIsDisabled.send()
-        }
-    }
-    @IBAction func toggleThree(_ sender: Any) {
-        switch toggleButtonThree.isOn {
-        case true: toggleViewModel.toggleSwitchButtonIsEnabled.send()
-        case false: toggleViewModel.toggleSwitchButtonIsDisabled.send()
-        }
-    }
-    @IBAction func toggleFour(_ sender: Any) {
-        switch toggleButtonFour.isOn {
-        case true: toggleViewModel.toggleSwitchButtonIsEnabled.send()
-        case false: toggleViewModel.toggleSwitchButtonIsDisabled.send()
-        }
-    }
-    @IBAction func toggleFive(_ sender: Any) {
-        switch toggleButtonFive.isOn {
+    @IBAction func toggleOne(_ sender: Any) { toggleButtonIsOn(toggleButton: toggleButtonOne) }
+    @IBAction func toggleTwo(_ sender: Any) { toggleButtonIsOn(toggleButton: toggleButtonTwo) }
+    @IBAction func toggleThree(_ sender: Any) { toggleButtonIsOn(toggleButton: toggleButtonThree) }
+    @IBAction func toggleFour(_ sender: Any) { toggleButtonIsOn(toggleButton: toggleButtonFour) }
+    @IBAction func toggleFive(_ sender: Any) { toggleButtonIsOn(toggleButton: toggleButtonFive) }
+}
+
+// MARK: - Extension
+extension ToggleViewController {
+    private func toggleButtonIsOn(toggleButton: UISwitch) {
+        switch toggleButton.isOn {
         case true: toggleViewModel.toggleSwitchButtonIsEnabled.send()
         case false: toggleViewModel.toggleSwitchButtonIsDisabled.send()
         }
