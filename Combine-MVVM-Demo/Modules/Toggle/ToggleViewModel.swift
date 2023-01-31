@@ -8,13 +8,11 @@ final class ToggleViewModel {
     // MARK: - Properties
     private var cancellables = Set<AnyCancellable>()
     private var toggles: [Bool] = []
-
     private var toggleSwitchIsEnabled: Bool = false {
         didSet {
             toggles.append(toggleSwitchIsEnabled)
         }
     }
-
     private var text = "" {
         didSet {
             toggleSwitchLabel.send("\(text)")
@@ -27,10 +25,16 @@ final class ToggleViewModel {
 
     // MARK: - Output
     let toggleSwitchLabel = CurrentValueSubject<String, Never>("")
-    var toggleSwitchesIsEnabled = CurrentValueSubject<Bool, Never>(false)
+    let toggleSwitchesIsEnabled = CurrentValueSubject<Bool, Never>(false)
 
     // MARK: - Init
     init() {
+        setupToggleSwitchButtonIsEnabled()
+        setupToggleSwitchButtonIsDisabled()
+    }
+
+    // MARK: - API
+    private func setupToggleSwitchButtonIsEnabled() {
         toggleSwitchButtonIsEnabled.sink { [weak self] in
             self?.toggleSwitchIsEnabled = true
             if self?.toggles == self?.toggles2 {
@@ -38,7 +42,9 @@ final class ToggleViewModel {
             }
         }
         .store(in: &cancellables)
+    }
 
+    private func setupToggleSwitchButtonIsDisabled() {
         toggleSwitchButtonIsDisabled.sink { [weak self] in
             self?.text = ""
             self?.toggleSwitchIsEnabled = false
@@ -47,6 +53,5 @@ final class ToggleViewModel {
         .store(in: &cancellables)
     }
 
-    // MARK: - API
     // MARK: - Setups
 }
