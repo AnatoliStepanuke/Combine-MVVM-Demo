@@ -12,6 +12,7 @@ final class ToggleViewController: UIViewController {
 
     // MARK: - Constants
     private let toggleViewModel = ToggleViewModel()
+    private let passthroughSubjectInput: PassthroughSubject<ToggleViewModel.Input, Never> = .init()
 
     // MARK: - Properties
     private var cancellables = Set<AnyCancellable>()
@@ -24,10 +25,18 @@ final class ToggleViewController: UIViewController {
 
     // MARK: - Setups
     private func setupBindings() {
-        toggleViewModel.toggleSwitchLabel.sink(receiveValue: { [weak self] text in
-            self?.toggleLabel.text = text
-        })
-        .store(in: &cancellables)
+        let output = toggleViewModel.handleToggleSwitchButtons(input: passthroughSubjectInput.eraseToAnyPublisher())
+        output
+            .sink { [weak self] event in
+                switch event {
+                case .toggleSwitchLabel(let text): self?.toggleLabel.text = text
+                case .toggleSwitchesAreEnabled(isEnabled: false):
+                    self?.passthroughSubjectInput.send(.toggleSwitchButtonIsDisabled)
+                case .toggleSwitchesAreEnabled(isEnabled: true):
+                    self?.passthroughSubjectInput.send(.toggleSwitchButtonIsEnabled)
+                }
+            }
+            .store(in: &cancellables)
     }
 
     // MARK: - Actions
@@ -38,12 +47,12 @@ final class ToggleViewController: UIViewController {
     @IBAction func toggleFive(_ sender: Any) { toggleButtonIsOn(toggleButton: toggleButtonFive) }
 }
 
-// MARK: - Extension
+// MARK: - Extensions
 extension ToggleViewController {
     private func toggleButtonIsOn(toggleButton: UISwitch) {
         switch toggleButton.isOn {
-        case true: toggleViewModel.toggleSwitchButtonIsEnabled.send()
-        case false: toggleViewModel.toggleSwitchButtonIsDisabled.send()
+        case true: passthroughSubjectInput.send(.toggleSwitchButtonIsEnabled)
+        case false: passthroughSubjectInput.send(.toggleSwitchButtonIsDisabled)
         }
     }
 }
