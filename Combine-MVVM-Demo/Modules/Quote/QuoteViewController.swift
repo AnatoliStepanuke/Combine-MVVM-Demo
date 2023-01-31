@@ -46,4 +46,14 @@ final class QuoteViewController: UIViewController {
     @IBAction func refreshButtonTapped(_ sender: Any) {
         passthroughSubjectInput.send(.refreshButtonDidTapped)
     }
+
+    @IBAction func toggleControllerButtonTapped(_ sender: Any) {
+        if let toggleViewController = storyboard?.instantiateViewController(
+            withIdentifier: "ToggleViewController"
+        ) as? ToggleViewController {
+//            let vm = CounterViewModel()
+//            vc.viewModel = vm
+            navigationController?.pushViewController(toggleViewController, animated: true)
+        }
+    }
 }
