@@ -3,7 +3,6 @@ import Combine
 
 final class ToggleViewModel {
     // MARK: - Constants
-    private let toggles2: [Bool] = [true, true, true, true, true]
     private let passthroughSubjectOutput: PassthroughSubject<Output, Never> = .init()
 
     // MARK: - Properties
@@ -45,7 +44,7 @@ final class ToggleViewModel {
     // MARK: - Setups
     private func setupToggleSwitchButtonIsEnabled() {
         self.toggleSwitchIsEnabled = true
-        if self.toggles == self.toggles2 {
+        if self.toggles == Constants.togglesForCompare {
             self.text = "All toggles are Enabled"
         }
     }
@@ -54,5 +53,12 @@ final class ToggleViewModel {
         self.text = ""
         self.toggleSwitchIsEnabled = false
         self.toggles.removeLast(2)
+    }
+}
+
+// MARK: - Extensions
+extension ToggleViewModel {
+    enum Constants {
+        static let togglesForCompare: [Bool] = [true, true, true, true, true]
     }
 }

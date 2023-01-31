@@ -47,7 +47,7 @@ final class ToggleViewController: UIViewController {
     @IBAction func toggleFive(_ sender: Any) { toggleButtonIsOn(toggleButton: toggleButtonFive) }
 }
 
-// MARK: - Extension
+// MARK: - Extensions
 extension ToggleViewController {
     private func toggleButtonIsOn(toggleButton: UISwitch) {
         switch toggleButton.isOn {
