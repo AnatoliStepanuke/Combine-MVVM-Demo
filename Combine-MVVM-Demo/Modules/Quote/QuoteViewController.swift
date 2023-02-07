@@ -51,8 +51,6 @@ final class QuoteViewController: UIViewController {
         if let toggleViewController = storyboard?.instantiateViewController(
             withIdentifier: "ToggleViewController"
         ) as? ToggleViewController {
-//            let vm = CounterViewModel()
-//            vc.viewModel = vm
             navigationController?.pushViewController(toggleViewController, animated: true)
         }
     }
